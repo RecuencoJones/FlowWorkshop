@@ -11,8 +11,8 @@ You can always let a UI-client do the job, but we prefer working straight with t
 
 We recommend using **git bash** console when working with git because:
 
-- It standarizes all paths (/this/is/how/paths/work) and commands (ls, cp, mv, rm) to UNIX.
-- It will suggest arguments for our commands using TAB key.
+- It standarizes all paths (_/this/is/how/paths/work_) and commands (_ls_, _cp_, _mv_, _rm_) to UNIX.
+- It will suggest arguments for our commands using _TAB_ key.
 - Finally, it won't interfere with our basic CMD.
 
 ## Git configuration
@@ -22,6 +22,7 @@ We recommend using **git bash** console when working with git because:
 To set your username and email, which will be set whenever you commit in order to identify you as author of that commit you have to write these commands:
 
 `git config --global user.name "Doe, John"`
+
 `git config --global user.email john.doe@foo-bar.com`
 
 There are several more commands that you can configure, check [git-config](http://git-scm.com/docs/git-config) reference for more info.
@@ -32,7 +33,7 @@ In order to clone a project, we will check for the **clone** button which will h
 
 `git clone URL`
 
-The project will be cloned into a new folder with the name of the project, so we have to move into that folder.
+The project will be cloned into a new folder with the name of the project, so we have to move into that folder:
 
 `cd PROJECTFOLDER`
 
@@ -43,7 +44,7 @@ We will find some .git* files inside the project, these are project level settin
 - [.gitmodules](http://git-scm.com/docs/gitmodules): this file is weird to find, but it's used to import repositories into other repos.
 - [.gitconfig](http://git-scm.com/docs/gitconfig): this gile includes local git configurations, like using https:// instead of git://
 
-Also, most repositories include a README.md file like this to explain repository contents.
+Also, most repositories include a **README.md** file like this to explain repository contents.
 
 ### Commit, push and pull
 
@@ -51,7 +52,7 @@ These three are the most important commands in git.
 
 #### Commit
 
-Commits are the basic unit of VCS, it represent a frozen step in the past which contains all the changes made until that point and therefore, the list of commits represent a history of the repository changes. Whenever some changes on the code are done and to save its state we will commit, but first we have to add the files to the commit state.
+Commits are the basic unit of VCS, it represent a frozen step in the past which contains all the changes made until that point and therefore, the list of commits represent a history of the repository changes. Whenever some changes on the code are done and to save its state, we will commit, but first we have to add the files to the commit status.
 
 In order to do this:
 
@@ -67,7 +68,7 @@ this is the short way to commit, for example:
 
 You can also type `git commit` and VIM editor will open so you can write commit header and body.
 
-All commits we do will be saved in our local repository and we will have to push them to the remote branch.
+All commits we do will be saved in our local repository and we will have to push them to the remote branch in so other contributors can get them.
 
 #### Push
 
@@ -75,15 +76,15 @@ With this command we send our local committed changes to the remote repository f
 
 `git push REMOTE BRANCH`
 
-most of the time REMOTE will be origin and BRANCH the branch you're currently working on (NEVER EVER PUSH TO MASTER OR DEVELOP). For example:
+Most of the time REMOTE will be _origin_ and BRANCH the branch you're currently working on **[NEVER EVER PUSH TO MASTER OR DEVELOP]**. For example:
 
 `git push origin feature/CMP-33`
 
-After introducing our password, the commits will be sent to the remote and appended to the HEAD of the branch.
+After authorization, the commits will be sent to the remote and appended to the HEAD of the branch.
 
 #### Pull
 
-In order to get changes that were made in the remote repository, we need to bring them to our branches. Most commonly, develop branch will be updated after some pull request and we will have to bring those changes in order to be up to date. So we type:
+In order to get changes that were made in the remote repository, we need to bring them to our local branches. Most commonly, develop branch will be updated after some pull request and we will have to bring those changes in order to be up to date. So we type:
 
 `git pull REMOTE BRANCH`
 
@@ -106,7 +107,7 @@ In order to track remote branches and swap amongst them, we have some more comma
 
 `git branch` will output what is our currently working branch
 
-`git checkout BRANCHNAME` will change the currently working branch to the one we specify. Also, if we want to change branches undoing all changes we did in the other branch we can use `git checkout BRANCHNAME --force` of we can **stash** the changes so we can apply them later again, this is done with `git stash`, read more in the docs: [git-stash](http://git-scm.com/docs/git-stash)
+`git checkout BRANCHNAME` will change the currently working branch to the one we specify. Also, if we want to change branches undoing all uncommitted changes we did in the working branch we can use `git checkout BRANCHNAME --force` or we can **stash** the changes so we can apply them later again, this is done with `git stash`, read more in the docs: [git-stash](http://git-scm.com/docs/git-stash)
 
 ### Git flow
 
