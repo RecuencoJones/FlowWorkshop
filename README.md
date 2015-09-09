@@ -3,6 +3,7 @@
 ## Prerequisites:
 
 `Git` installed
+
 Contributor rights on remote repository (GitHub, GitLab, BitBucket, Stash, ...)
 
 ## Suggestions:
@@ -19,13 +20,13 @@ We recommend using **git bash** console when working with git because:
 
 ### Username and email
 
-To set your username and email, which will be set whenever you commit in order to identify you as author of that commit you have to write these commands:
+To set your username and email, which will be used whenever you commit in order to identify you as author of that commit you have to type these commands:
 
 `git config --global user.name "Doe, John"`
 
 `git config --global user.email john.doe@foo-bar.com`
 
-There are several more commands that you can configure, check [git-config](http://git-scm.com/docs/git-config) reference for more info.
+There are several more options that you can configure, check [git-config](http://git-scm.com/docs/git-config) reference for more info.
 
 ### Cloning a project into local
 
@@ -37,7 +38,7 @@ The project will be cloned into a new folder with the name of the project, so we
 
 `cd PROJECTFOLDER`
 
-We will find some .git* files inside the project, these are project level settings. Most common files are:
+We will find some _.git*_ files inside the project, these are project level settings. Most common files are:
 
 - [.gitignore](http://git-scm.com/docs/gitignore): this file contains name patterns that will be ignored from VCS and therefore won't be tracked nor pushed by git.
 - [.gitattributes](http://git-scm.com/docs/gitattributes): this file contains settings for files to be treated in a special way if necessary. For example, to treat images as binaries and therefore don't track them for internal changes, to set line endings as CRLF or LF, etc.
@@ -52,7 +53,7 @@ These three are the most important commands in git.
 
 #### Commit
 
-Commits are the basic unit of VCS, it represent a frozen step in the past which contains all the changes made until that point and therefore, the list of commits represent a history of the repository changes. Whenever some changes on the code are done and to save its state, we will commit, but first we have to add the files to the commit status.
+Commits are the basic unit of VCS, they represent a frozen point in the past which contains all the changes made until then and therefore, the list of commits represent a history of the repository changes. Whenever some changes on the code are done and to save its state, we will commit, but first we have to add the files to the commit status.
 
 In order to do this:
 
@@ -68,7 +69,7 @@ this is the short way to commit, for example:
 
 You can also type `git commit` and VIM editor will open so you can write commit header and body.
 
-All commits we do will be saved in our local repository and we will have to push them to the remote branch in so other contributors can get them.
+All commits we do will be saved in our local repository and we will have to push them to the remote branch so other contributors can get them.
 
 #### Push
 
